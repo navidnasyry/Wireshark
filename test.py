@@ -25,6 +25,13 @@ for packet in capture.sniff_continuously(packet_count=5):
 '''https://stackoverflow.com/questions/57099396/continuously-capture-packets-in-pyshark'''
 '''https://wiki.wireshark.org/CaptureFilters'''
 
+'''
+tc qdisc add dev eth0 root netem loss 10%
+iperf3 -c 127.0.0.1 -p 4040 -t 60 -u -b 5G  
+iperf3 -s -p 4040 
+'''
+
+
 print(type(capture))
 
 #cap = pyshark.FileCapture('./compressed-trace.pcap',
