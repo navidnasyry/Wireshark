@@ -88,12 +88,6 @@ def main():
         sum_of_length += int(packet.length)      # sum of packet size
 
 
-        if src_port == 4040 : 
-            pass
-
-
-        else:
-            pass
 
 
 
